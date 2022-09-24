@@ -1,3 +1,40 @@
 body{
     background-image: url(/IMG/fondo1.png)
 }
+
+#boton{
+    border: 1px solid black;
+    width: 400px;
+    margin-left:10%;
+    margin-top: 8%;
+    height:100px;
+    font-size: 30px;
+    text-align: center;
+    border-radius:15px;
+}
+
+#boton2{
+    border: 1px solid black;
+    width: 400px;
+    margin-left:10%;
+    margin-top: 3%;
+    height:100px;
+    font-size: 30px;
+    text-align: center;
+    border-radius:15px;
+}
+
+#boton3{
+    border: 1px solid black;
+    width: 400px;
+    margin-left:10%;
+    margin-top: 3%;
+    height:100px;
+    font-size: 30px;
+    text-align: center;
+    border-radius:15px;
+}
+
+#texto{
+    margin-top: 5%;
+}

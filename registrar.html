@@ -1,50 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styleMenu.css">
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>VaidrollTeam Registrar</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+<div>
+<form method="post" action="registrar.php" name="vaidrollteam">
 
-    <title>Document</title>
-</head>
+<table>
 
-<body>
-    <header>
-        <img src="IMG/logo.jpg" style="width:9%">
-    </header>
-    
-    <div>
-        <form action="" method="post" class="formulario">
-            <h2>REGISTRAR</h2>
-            <?php
-            include(db.php);
-            include(registrarsu.php);
-            ?>
-            <div>
-                <div id="codigo">
-                    <label for="">CODIGO</label>
-                    <input type="text" name="codigo">
-                </div>
-                <div id="usuario">
-                    <label for="">USUARIO</label>
-                    <input type="text" name="usuario">
-                </div>
-                <div id="clave">
-                    <label for="">CLAVE</label>
-                    <input type="text" name="clave">
-                </div>
-                <div id="rol">
-                    <label for="">ROL</label>
-                    <input type="text" name="rol">
-                </div>
-                <div id="btnEnv">
-                    <input type="submit" class="boton" value="Registrar" name="registro">
-                </div>
-            </div>
-        </form>
-    </div>
+<tr><td><label>Registrar</label></td></tr>
+<tr><td><img src="logo.png"/></td></tr>
+<tr><td><input type="text" name="txtcodigo" placeholder="&#128273; Ingresar Codigo" required /></td></tr>
+<tr><td><input type="text" name="txtusuario" placeholder="&#128274; Ingresar Usuario" required /> </td></tr>
+<tr><td><input type="text" name="txtrol" placeholder="&#128273; Ingresar Rol" required /></td></tr>
+<tr><td><input type="password" name="txtpassword" placeholder="&#128274; Ingresar Contraseña" required /> </td></tr>
+<tr><td><input type="submit" value="Registrar" name="btnregistrar"/> </td></tr>
+<br>
+</table>
 
 
+
+</form>
+</div>
 </body>
 </html>
+
+<?php
+include('conexion.php');
+
+session_start();
+if(isset($_POST["btnregistrar"]))
+{
+
+$codigo = $_POST["txtcodigo"];
+$usuario = $_POST["txtusuario"];
+$rol = $_POST["txtrol"];
+$pass = $_POST["txtpassword"];
+
+	$sqlgrabar = "INSERT INTO FISCALIZADOR(codFizcac,FISC_USUARIO,ID_ROL,FISC_CLAVE) values ('$codigo', '$usuario', '$rol', '$pass')";
+	
+	if(mysqli_query($conn,$sqlgrabar))
+	{
+		echo "<script> alert('Usuario registrado con exito: $nombre'); window.location='index.php' </script>";
+	}else 
+	{
+		echo "Error: ".$sql."<br>".mysql_error($conn);
+	}
+} 
+?>
