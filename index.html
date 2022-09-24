@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
+
     <title>Document</title>
 </head>
-<style>
-    
-</style>
+
 <body>
     <header>
         <img src="IMG/logo.jpg" style="width:9%">
@@ -18,14 +17,11 @@
         <div id="imagen">
             <img src="IMG/iniciar.png" alt="" srcset="">
         </div>
-        <div id="formulario">
-            <p id="usuario">USUARIO</p>
-            <input type="text" name="tipo_de_dato"/>
-            <p id="clave">CONTRASEÑA</p>
-            <input type="text" name="tipo_de_dato"/>
-            <p></p>
-            <button id="btn-login">Ingresar</button>
-        </div>
+        <form id="formulario" action="validar.php" method="post">
+              <P></P><div id="t1">Usuario</div> <P></P><input type="text" id="usuario" placeholder="ingrese su nombre" name="usuario"><P></P>
+              <div id="t2">Contraseña</div> <P></P><input type="password" id="clave" placeholder="ingrese su contraseña" name="contraseña"><P></P>
+              <input id="btn-log" type="submit" value="Ingresar">
+        </form>
     </div>
 </body>
 </html>

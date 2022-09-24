@@ -13,28 +13,48 @@ div#imagen img{
     margin-left:38%;
 }
 
-div#formulario{
+form#formulario{
     width: 500px;
     height: 250px;
     margin-left:14%;
 }
 
-p#usuario{
-    margin-left: 20%;
+#t1{
+    margin-left: 15%;
+}
+
+#t2{
+    margin-left: 15%;
 }
 
 p#clave{
     margin-left: 20%;
 }
 
-div#formulario input{
-    margin-left: 20%;
-    height:35px;
-    width:300px;
-    margin-top: -3%;
+form#formulario p{
+    margin-left: 15%;
+    font-size: 17px;
 }
 
-button#btn-login{
+input#usuario{
+    margin-left: 15%;
+    font-size: 17px;
+    height: 34px;
+    width: 350px;
+    margin-top:-2%;
+    
+}
+
+input#clave{
+    margin-left: 15%;
+    font-size: 17px;
+    height: 34px;
+    width: 350px;
+    margin-top:-2%;
+    
+}
+
+input#btn-log{
     margin-left: 35%;
     margin-top:5%;
     font-size:20px;
